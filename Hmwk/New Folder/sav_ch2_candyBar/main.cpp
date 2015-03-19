@@ -38,6 +38,8 @@ int main(int argc, char** argv) {
     cout<<"Your Height = "<<htin<<"(inches)"endl;
     cout<<"Your Age = "<<ageyrs<<"(Years)"endl;
     cout<<"Your sex = "<<((mf=='m')?"Male":"Female")<<endl;
+    //exit stage right
+    
     
 
     return 0;
