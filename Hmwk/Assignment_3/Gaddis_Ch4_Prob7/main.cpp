@@ -20,23 +20,34 @@ using namespace std;
 //execution begins here
 int main(int argc, char** argv) {
 //Declare Variables
-unsigned short int sec,min,hour,day; //seconds,minutes,hours,days 
+unsigned int sec,min,hour,day,rmain; //seconds,minutes,hours,days,remainder 
+
 //Prompt user for input
 cout<<"How many seconds would you like calculated into larger units of time?"<<endl;
 cin>>sec;
 //calculate
 
 //output
-if (sec >= 60)
-{
-cout<<"That is "<<min<<"minutes."<<endl;
+if (sec >=86400)//greater then amount of seconds in days
+{   
+    day = (int)sec/86400;//calculate 
+    rmain = sec % 86400;//remainder in seconds
+    cout<<"That is "<<day<<" days and "<<rmain<<" seconds."<<endl;//output results
 }
-else if (sec >=3600)
+else if (sec>=3600)//is greater then amount of seconds in hours
 {
-cout<<"That is "<<hour<<"minutes."<<endl;
+     hour = (int)sec/3600;//calculate
+     rmain = sec % 3600;//remainder in seconds
+cout<<"That is "<<hour<<" hours and "<<rmain<<" seconds."<<endl;//output results
 }
-else if(sec >=86400)
+else if (sec >=60)
 {
-cout<<"That is "<<day<<"minutes."<<endl;
+    min = (int)sec/60;//calculate
+    rmain = sec % 60; //remainder in seconds       
+cout<<"That is "<<min<<" minutes and "<<rmain<<" seconds."<<endl;//output results
+}
+else if (sec < 60)//calculate
+{
+cout<<"That is "<<sec<<" seconds."<<endl;//output results
 }
 }
