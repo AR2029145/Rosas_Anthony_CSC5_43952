@@ -24,13 +24,13 @@ int main(int argc, char** argv) {
         //Prompt user for input
 
             
-    //do{ 
+    do{ 
             cout<<"What is the speed of the vehicle in mph?"<<endl;
             cin>>speed;
             cout<<"How many hours has it traveled?"<<endl;
             cin>>hours;
             
-    //}while(!(disT >=1 && hours >=1));
+    }while(!(speed >=1 && hours >=1));
         
     
         //output
