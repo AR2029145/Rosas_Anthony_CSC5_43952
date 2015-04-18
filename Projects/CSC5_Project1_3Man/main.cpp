@@ -13,6 +13,7 @@
 #include <ctime>//time fuctions
 #include <cmath>// math function library
 #include <iomanip>//format lib
+#include <cstring>//char place holder
 using namespace std;
 //user Libraries
 //global constants
@@ -39,6 +40,7 @@ int main(int argc, char** argv)
 	
         //Declare Variables
 	unsigned int playCot;//user input for player #
+        char pName[21];//Players name up to 21 char(array)
         
         //array of player structures
 	player players[MAXPLAY];
@@ -105,9 +107,9 @@ int main(int argc, char** argv)
             
             do
             {
-                cout<<"."<<endl;
-                
-             }while(playTemp <= 0 && playTemp >= 9 );
+                cout<<"Please enter a valid player name."<<endl;
+                cin>>pName;
+             }while(strlen(pName) <= 0);//strlen is a function call from<cstringlib>
         }
                    
           
