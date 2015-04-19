@@ -27,8 +27,7 @@ using namespace std;
 struct player{// Players Name and points stored as a structure 
 	string name;//Players name
 	unsigned int points = 30;// Players points 
-	bool active = false; //player may be eliminated or game may have started 
-                             //with less players than the max allowed
+	bool active = false; //player may be eliminated or game may have started with less players than the max allowed
 };
 
 
@@ -97,8 +96,8 @@ int main(int argc, char** argv)
         do
         {
             cout<<"Please enter a valid amount of players."<<endl;
-            cin >> playCot;//for every player in player_count, assign them a name and make them active example: players[index].name = "Anthony"; players[i].active = true;
-    //playCot -1 b/c array is 0-7(index and we don't want a "8th" index )
+            cin >> playCot;//for every player in player_count, assign them a name and make them active example: players[index].name = "Anthony"; players[index].active = true;
+    //playCot -1 b/c array is 0-7(index and we don't want/have a "8th" index )
 
          }while(playCot <= 0 || playCot >= 9 );
              
@@ -116,7 +115,16 @@ int main(int argc, char** argv)
         
         
         
-        
+        /*2.	2 to 8
+*Total of 7 - Player to right of roller loses a point 
+*Total of 11 - Player to left of roller loses a point
+*Total of 9 – Everybody loses a Point
+*Any 3 or sum to 3 - Three man loses a point 
+*1 and 4 – Lose a turn 
+*1 and 5 – Lose a turn 
+*Doubles – Choose a player to lose points
+*/
+         
         
         
 	return 0;	
